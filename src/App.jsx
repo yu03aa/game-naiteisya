@@ -515,18 +515,37 @@ const TurnBasedRPG = () => {
   const HPBar = ({ current, max, color, label }) => {
     const percentage = (current / max) * 100;
     const bgColor = color === 'hp' ? '#ED7D2B' : '#149CD8';
+    
+    // HP残量に応じて色を変更
+    let barColor = bgColor;
+    if (color === 'hp') {
+      if (percentage > 50) {
+        barColor = '#92cc41'; // 緑
+      } else if (percentage > 20) {
+        barColor = '#f7d51d'; // 黄色
+      } else {
+        barColor = '#e76e55'; // 赤
+      }
+    }
+    
     return (
       <div>
         <div className="flex justify-between mb-1 text-sm">
           <span>{label}</span>
           <span>{current} / {max}</span>
         </div>
-        <div className="w-full bg-gray-700 h-4 rounded-lg overflow-hidden">
+        <div className="w-full h-4 rounded-sm overflow-hidden" style={{ 
+          backgroundColor: '#212529',
+          border: '4px solid #fff',
+          boxShadow: 'inset -4px -4px #adafbc'
+        }}>
           <div 
-            className="h-full transition-all duration-500"
+            className="h-full transition-all duration-300"
             style={{ 
               width: `${percentage}%`,
-              backgroundColor: bgColor
+              backgroundColor: barColor,
+              boxShadow: percentage > 0 ? '0 -4px 0 rgba(0,0,0,0.3) inset' : 'none',
+              imageRendering: 'pixelated'
             }}
           />
         </div>
