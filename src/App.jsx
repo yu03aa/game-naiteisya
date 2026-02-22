@@ -25,7 +25,7 @@ const TurnBasedRPG = () => {
   const classes = {
     warrior: {
       name: 'ふっきー',
-      sprite: '/fukky.png',
+      sprite: './fukky.png',
       isImage: true,
       job: 'エンジニア',
       team: 'Qiita',
@@ -48,7 +48,7 @@ const TurnBasedRPG = () => {
     },
     mage: {
       name: 'ぐっちー',
-      sprite: '/gultuti.png',
+      sprite: './gultuti.png',
       isImage: true,
       job: 'エンジニア',
       team: 'Qiita',
@@ -72,7 +72,7 @@ const TurnBasedRPG = () => {
     },
     thief: {
       name: 'すえ',
-      sprite: '/sue.png',
+      sprite: './sue.png',
       isImage: true,
       job: 'エンジニア',
       team: 'Qiita',
@@ -96,7 +96,7 @@ const TurnBasedRPG = () => {
     },
     priest: {
       name: 'あささ',
-      sprite: '/asasa.png',
+      sprite: './asasa.png',
       isImage: true,
       job: 'エンジニア',
       team: 'Qiita',
@@ -121,10 +121,10 @@ const TurnBasedRPG = () => {
   };
 
   const enemies = [
-    { name: 'スーモンサーゼクシア', maxHp: 120, hp: 120, attack: 10, defense: 5, exp: 20, gold: 30, sprite: '/rasubosu.png', isImage: true },
-    { name: 'ゴブリン', maxHp: 120, hp: 120, attack: 15, defense: 8, exp: 35, gold: 50, sprite: '/rasubosu.png', isImage: true },
-    { name: 'オーク', maxHp: 120, hp: 120, attack: 25, defense: 12, exp: 50, gold: 80, sprite: '/rasubosu.png', isImage: true },
-    { name: 'ドラゴン', maxHp: 120, hp: 120, attack: 35, defense: 20, exp: 100, gold: 200, sprite: '/rasubosu.png', isImage: true }
+    { name: 'スーモンサーゼクシア', maxHp: 120, hp: 120, attack: 10, defense: 5, exp: 20, gold: 30, sprite: './rasubosu.png', isImage: true },
+    { name: 'ゴブリン', maxHp: 120, hp: 120, attack: 15, defense: 8, exp: 35, gold: 50, sprite: './rasubosu.png', isImage: true },
+    { name: 'オーク', maxHp: 120, hp: 120, attack: 25, defense: 12, exp: 50, gold: 80, sprite: './rasubosu.png', isImage: true },
+    { name: 'ドラゴン', maxHp: 120, hp: 120, attack: 35, defense: 20, exp: 100, gold: 200, sprite: './rasubosu.png', isImage: true }
   ];
 
   const quizzes = [
@@ -525,7 +525,7 @@ const TurnBasedRPG = () => {
       <div 
         className="min-h-screen text-white p-4 flex items-center justify-center overflow-hidden"
         style={{
-          backgroundImage: 'url(/haikei.png)',
+          backgroundImage: 'url(./haikei.png)',
           backgroundSize: 'cover',
           backgroundPosition: 'center',
           backgroundRepeat: 'no-repeat',
@@ -568,7 +568,7 @@ const TurnBasedRPG = () => {
       <div 
         className="min-h-screen text-white flex items-center justify-center p-8"
         style={{
-          backgroundImage: 'url(/haikei.png)',
+          backgroundImage: 'url(./haikei.png)',
           backgroundSize: 'cover',
           backgroundPosition: 'center',
           backgroundRepeat: 'no-repeat'
@@ -623,7 +623,7 @@ const TurnBasedRPG = () => {
       <div 
         className="min-h-screen text-white p-4"
         style={{
-          backgroundImage: 'url(/haikei.png)',
+          backgroundImage: 'url(./haikei.png)',
           backgroundSize: 'cover',
           backgroundPosition: 'center',
           backgroundRepeat: 'no-repeat'
@@ -759,7 +759,7 @@ const TurnBasedRPG = () => {
                     <div className="text-xl font-bold mb-2" style={{ color: 'white' }}>必殺技</div>
                     <div className="text-sm mb-3" style={{ color: 'white' }}>消費MP：15</div>
                     <div className="flex justify-center">
-                      <img src="/hiltukosi.png" alt="必殺技" style={{ width: '100px', height: '100px' }} className="object-contain" />
+                      <img src="./hiltukosi.png" alt="必殺技" style={{ width: '100px', height: '100px' }} className="object-contain" />
                     </div>
                   </div>
                 </button>
@@ -788,7 +788,7 @@ const TurnBasedRPG = () => {
                     <div className="text-xl font-bold mb-2" style={{ color: 'white' }}>回復</div>
                     <div className="text-sm mb-3" style={{ color: 'white' }}>消費MP：15</div>
                     <div className="flex justify-center">
-                      <img src="/nabi.png" alt="回復" style={{ width: '100px', height: '100px' }} className="object-contain" />
+                      <img src="./nabi.png" alt="回復" style={{ width: '100px', height: '100px' }} className="object-contain" />
                     </div>
                   </div>
                 </button>
@@ -805,7 +805,7 @@ const TurnBasedRPG = () => {
       <div 
         className="min-h-screen text-white flex items-center justify-center p-8"
         style={{
-          backgroundImage: 'url(/haikei.png)',
+          backgroundImage: 'url(./haikei.png)',
           backgroundSize: 'cover',
           backgroundPosition: 'center',
           backgroundRepeat: 'no-repeat'
@@ -864,7 +864,7 @@ const TurnBasedRPG = () => {
       <div 
         className="min-h-screen text-white flex items-center justify-center p-8"
         style={{
-          backgroundImage: 'url(/haikei.png)',
+          backgroundImage: 'url(./haikei.png)',
           backgroundSize: 'cover',
           backgroundPosition: 'center',
           backgroundRepeat: 'no-repeat'
