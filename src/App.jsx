@@ -514,10 +514,9 @@ const TurnBasedRPG = () => {
   // ========== UIコンポーネント ==========
   const HPBar = ({ current, max, color, label }) => {
     const percentage = (current / max) * 100;
-    const bgColor = color === 'hp' ? '#ED7D2B' : '#149CD8';
     
-    // HP残量に応じて色を変更
-    let barColor = bgColor;
+    // HP/MP残量に応じて色を変更
+    let barColor;
     if (color === 'hp') {
       if (percentage > 50) {
         barColor = '#92cc41'; // 緑
@@ -526,6 +525,8 @@ const TurnBasedRPG = () => {
       } else {
         barColor = '#e76e55'; // 赤
       }
+    } else {
+      barColor = '#149CD8'; // MP用の青
     }
     
     return (
@@ -534,20 +535,28 @@ const TurnBasedRPG = () => {
           <span>{label}</span>
           <span>{current} / {max}</span>
         </div>
-        <div className="w-full h-4 rounded-sm overflow-hidden" style={{ 
-          backgroundColor: '#212529',
-          border: '4px solid #fff',
-          boxShadow: 'inset -4px -4px #adafbc'
-        }}>
+        <div 
+          className="w-full h-4 overflow-hidden" 
+          style={{ 
+            backgroundColor: '#212529',
+            border: '4px solid #fff',
+            boxShadow: 'inset -4px -4px #adafbc',
+            borderRadius: '4px'
+          }}
+        >
           <div 
-            className="h-full transition-all duration-300"
             style={{ 
               width: `${percentage}%`,
+              height: '100%',
               backgroundColor: barColor,
-              boxShadow: percentage > 0 ? '0 -4px 0 rgba(0,0,0,0.3) inset' : 'none',
-              imageRendering: 'pixelated'
+              transition: 'width 0.3s ease-in-out',
+              boxShadow: '0 -2px 0 rgba(0,0,0,0.3) inset'
             }}
           />
+        </div>
+      </div>
+    );
+  };
         </div>
       </div>
     );
