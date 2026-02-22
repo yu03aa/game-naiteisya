@@ -818,13 +818,10 @@ const TurnBasedRPG = () => {
           }}
         >
           <h1 className="text-5xl font-bold mb-6 text-yellow-400">勝利</h1>
-          <div className="font-bold mb-6" style={{ 
-            fontSize: '7.7rem',
-            color: victoryRank === 'S' ? '#FFD700' : 
-                   victoryRank === 'A' ? '#C0C0C0' : 
-                   victoryRank === 'B' ? '#CD7F32' : 
-                   victoryRank === 'C' ? '#87CEEB' : 
-                   victoryRank === 'D' ? '#90EE90' : '#808080'
+          <div className="mb-6" style={{ 
+            fontSize: '4.95rem',
+            fontWeight: '900',
+            color: 'white'
           }}>
             ランク: {victoryRank}
           </div>
@@ -880,7 +877,7 @@ const TurnBasedRPG = () => {
           }}
         >
           <h1 className="text-5xl font-bold mb-6 text-red-500">敗北</h1>
-          <div className="font-bold mb-6" style={{ fontSize: '7.7rem', color: '#808080' }}>
+          <div className="mb-6" style={{ fontSize: '4.95rem', fontWeight: '900', color: 'white' }}>
             ランク: E
           </div>
           <div className="space-y-2 mb-8">
