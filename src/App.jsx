@@ -512,15 +512,23 @@ const TurnBasedRPG = () => {
   }, [isPlayerTurn]);
 
   // ========== UIコンポーネント ==========
-  const HPBar = ({ current, max, color }) => {
+  const HPBar = ({ current, max, color, label }) => {
     const percentage = (current / max) * 100;
+    const bgColor = color === 'hp' ? '#ED7D2B' : '#149CD8';
     return (
-      <div className="w-full bg-gray-700 h-6 rounded-lg overflow-hidden border-2 border-gray-600">
-        <div 
-          className={`h-full transition-all duration-500 ${color} flex items-center justify-center text-white text-sm font-bold`}
-          style={{ width: `${percentage}%` }}
-        >
-          {current} / {max}
+      <div>
+        <div className="flex justify-between mb-1 text-sm">
+          <span>{label}</span>
+          <span>{current} / {max}</span>
+        </div>
+        <div className="w-full bg-gray-700 h-4 rounded-lg overflow-hidden">
+          <div 
+            className="h-full transition-all duration-500"
+            style={{ 
+              width: `${percentage}%`,
+              backgroundColor: bgColor
+            }}
+          />
         </div>
       </div>
     );
@@ -599,39 +607,11 @@ const TurnBasedRPG = () => {
               )}
             </div>
             <h2 className="text-5xl font-bold mb-6">{player.className}</h2>
-            <div className="space-y-3 mb-8">
-              <div>
-                <div className="flex justify-between mb-1">
-                  <span>HP</span>
-                  <span>{player.hp} / {player.maxHp}</span>
-                </div>
-                <div className="w-full bg-gray-700 h-4 rounded-lg overflow-hidden">
-                  <div 
-                    className="h-full transition-all duration-500"
-                    style={{ 
-                      width: `${(player.hp / player.maxHp) * 100}%`,
-                      backgroundColor: '#ED7D2B'
-                    }}
-                  />
-                </div>
-              </div>
-              <div>
-                <div className="flex justify-between mb-1">
-                  <span>MP</span>
-                  <span>{player.mp} / {player.maxMp}</span>
-                </div>
-                <div className="w-full bg-gray-700 h-4 rounded-lg overflow-hidden">
-                  <div 
-                    className="h-full transition-all duration-500"
-                    style={{ 
-                      width: `${(player.mp / player.maxMp) * 100}%`,
-                      backgroundColor: '#149CD8'
-                    }}
-                  />
-                </div>
-              </div>
-              <div className="text-center">攻撃: {player.attack}</div>
-              <div className="text-center">防御: {player.defense}</div>
+            <div className="space-y-2 mb-8 text-center">
+              <div>HP: {player.hp} / {player.maxHp}</div>
+              <div>MP: {player.mp} / {player.maxMp}</div>
+              <div>攻撃: {player.attack}</div>
+              <div>防御: {player.defense}</div>
             </div>
             <div className="space-y-4">
               <button
@@ -684,8 +664,8 @@ const TurnBasedRPG = () => {
               </div>
               <h3 className="text-2xl font-bold mb-2 text-center">{player.className}</h3>
               <div className="space-y-2">
-                <HPBar current={player.hp} max={player.maxHp} color="bg-red-500" />
-                <HPBar current={player.mp} max={player.maxMp} color="bg-blue-500" />
+                <HPBar current={player.hp} max={player.maxHp} color="hp" label="HP" />
+                <HPBar current={player.mp} max={player.maxMp} color="mp" label="MP" />
               </div>
               {activeBuffs.length > 0 && (
                 <div className="mt-2 text-xs text-yellow-400">
@@ -711,7 +691,7 @@ const TurnBasedRPG = () => {
                 )}
               </div>
               <h3 className="text-2xl font-bold mb-4 text-center">{enemy.name}</h3>
-              <HPBar current={enemy.hp} max={enemy.maxHp} color="bg-red-500" />
+              <HPBar current={enemy.hp} max={enemy.maxHp} color="hp" label="HP" />
             </div>
           </div>
           
