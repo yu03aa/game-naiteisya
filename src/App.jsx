@@ -598,17 +598,15 @@ const TurnBasedRPG = () => {
             <div className="space-y-4">
               <button
                 onClick={startBattle}
-                className="w-full bg-gradient-to-r from-red-600 to-orange-600 hover:from-red-700 hover:to-orange-700 py-8 rounded-lg font-bold transition-all transform hover:scale-105"
-                style={{ fontSize: '1.68rem' }}
+                className="w-full transition-all transform hover:scale-105"
               >
-                冒険に出発
+                <img src="./boukennUI.png" alt="冒険に出発" className="w-full" />
               </button>
               <button
                 onClick={resetGame}
-                className="w-full bg-gray-600 hover:bg-gray-500 py-8 rounded-lg font-bold transition-all"
-                style={{ fontSize: '1.68rem' }}
+                className="w-full transition-all transform hover:scale-105"
               >
-                職業選択に戻る
+                <img src="./modoruUI.png" alt="職業選択に戻る" className="w-full" />
               </button>
             </div>
           </div>
