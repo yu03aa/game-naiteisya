@@ -599,11 +599,39 @@ const TurnBasedRPG = () => {
               )}
             </div>
             <h2 className="text-5xl font-bold mb-6">{player.className}</h2>
-            <div className="space-y-2 mb-8 text-center">
-              <div>HP: {player.hp} / {player.maxHp}</div>
-              <div>MP: {player.mp} / {player.maxMp}</div>
-              <div>攻撃: {player.attack}</div>
-              <div>防御: {player.defense}</div>
+            <div className="space-y-3 mb-8">
+              <div>
+                <div className="flex justify-between mb-1">
+                  <span>HP</span>
+                  <span>{player.hp} / {player.maxHp}</span>
+                </div>
+                <div className="w-full bg-gray-700 h-4 rounded-lg overflow-hidden">
+                  <div 
+                    className="h-full transition-all duration-500"
+                    style={{ 
+                      width: `${(player.hp / player.maxHp) * 100}%`,
+                      backgroundColor: '#ED7D2B'
+                    }}
+                  />
+                </div>
+              </div>
+              <div>
+                <div className="flex justify-between mb-1">
+                  <span>MP</span>
+                  <span>{player.mp} / {player.maxMp}</span>
+                </div>
+                <div className="w-full bg-gray-700 h-4 rounded-lg overflow-hidden">
+                  <div 
+                    className="h-full transition-all duration-500"
+                    style={{ 
+                      width: `${(player.mp / player.maxMp) * 100}%`,
+                      backgroundColor: '#149CD8'
+                    }}
+                  />
+                </div>
+              </div>
+              <div className="text-center">攻撃: {player.attack}</div>
+              <div className="text-center">防御: {player.defense}</div>
             </div>
             <div className="space-y-4">
               <button
