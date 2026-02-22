@@ -557,10 +557,6 @@ const TurnBasedRPG = () => {
       </div>
     );
   };
-        </div>
-      </div>
-    );
-  };
 
   // ========== 条件分岐レンダリング ==========
   if (gameState === 'classSelect') {
