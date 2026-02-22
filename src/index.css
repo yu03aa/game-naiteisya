@@ -3,13 +3,11 @@
 @tailwind utilities;
 
 body {
-  overflow: hidden;
   margin: 0;
   padding: 0;
   color: white;
 }
 
 html {
-  overflow: hidden;
   height: 100vh;
 }

@@ -50,8 +50,8 @@ const TurnBasedRPG = () => {
       name: 'ぐっちー',
       sprite: './gultuti.png',
       isImage: true,
-      job: 'エンジニア',
-      team: 'Qiita',
+      job: '営業',
+      team: 'ハナユメ',
       description: '強力な魔法攻撃と回復魔法を使える',
       baseStats: {
         maxHp: 120,
@@ -71,11 +71,11 @@ const TurnBasedRPG = () => {
       ]
     },
     thief: {
-      name: 'すえ',
+      name: 'すえちゃん',
       sprite: './sue.png',
       isImage: true,
-      job: 'エンジニア',
-      team: 'Qiita',
+      job: 'デザイナー',
+      team: 'ウェルネス',
       description: '素早い攻撃とトリッキーな技が得意',
       baseStats: {
         maxHp: 120,
@@ -98,8 +98,8 @@ const TurnBasedRPG = () => {
       name: 'あささ',
       sprite: './asasa.png',
       isImage: true,
-      job: 'エンジニア',
-      team: 'Qiita',
+      job: 'デザイナー',
+      team: 'ウェルネス',
       description: '回復とサポートに特化した職業',
       baseStats: {
         maxHp: 120,
@@ -523,13 +523,12 @@ const TurnBasedRPG = () => {
   if (gameState === 'classSelect') {
     return (
       <div 
-        className="min-h-screen text-white p-4 flex items-center justify-center overflow-hidden"
+        className="min-h-screen text-white p-4 flex items-center justify-center"
         style={{
           backgroundImage: 'url(./haikei.png)',
           backgroundSize: 'cover',
           backgroundPosition: 'center',
-          backgroundRepeat: 'no-repeat',
-          height: '100vh'
+          backgroundRepeat: 'no-repeat'
         }}
       >
         <div className="w-full max-w-md space-y-3 px-4 py-4">
@@ -546,8 +545,8 @@ const TurnBasedRPG = () => {
             >
               <div className="flex-1 text-left">
                 <h2 className="text-3xl font-bold mb-3" style={{ color: 'white' }}>{classData.name}</h2>
-                <div className="text-lg" style={{ color: 'white' }}>職業：{classData.job}</div>
-                <div className="text-lg" style={{ color: 'white' }}>配属：{classData.team}</div>
+                <div className="text-lg" style={{ color: 'white', fontSize: '1.21rem' }}>職業：{classData.job}</div>
+                <div className="text-lg" style={{ color: 'white', fontSize: '1.21rem' }}>配属：{classData.team}</div>
               </div>
               <div className="flex-shrink-0 ml-4">
                 {classData.isImage ? (
