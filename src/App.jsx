@@ -583,11 +583,6 @@ const TurnBasedRPG = () => {
           backgroundRepeat: 'no-repeat'
         }}
       >
-          backgroundSize: 'cover',
-          backgroundPosition: 'center',
-          backgroundRepeat: 'no-repeat'
-        }}
-      >
         <div className="backdrop-blur-sm p-8 max-w-md w-full mx-4"
           style={{
             backgroundColor: 'rgba(0, 0, 0, 0.7)',
