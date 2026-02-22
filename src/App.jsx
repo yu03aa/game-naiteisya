@@ -599,14 +599,16 @@ const TurnBasedRPG = () => {
               <button
                 onClick={startBattle}
                 className="w-full transition-all transform hover:scale-105"
+                style={{ background: 'none', border: 'none', padding: 0 }}
               >
-                <img src="./boukennUI.png" alt="冒険に出発" className="w-full" />
+                <img src="./boukennUI.png" alt="冒険に出発" style={{ width: '60%', margin: '0 auto', display: 'block' }} />
               </button>
               <button
                 onClick={resetGame}
                 className="w-full transition-all transform hover:scale-105"
+                style={{ background: 'none', border: 'none', padding: 0 }}
               >
-                <img src="./modoruUI.png" alt="職業選択に戻る" className="w-full" />
+                <img src="./modoruUI.png" alt="職業選択に戻る" style={{ width: '60%', margin: '0 auto', display: 'block' }} />
               </button>
             </div>
           </div>
