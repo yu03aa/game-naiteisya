@@ -589,7 +589,7 @@ const TurnBasedRPG = () => {
               )}
             </div>
             <h2 className="text-5xl font-bold mb-6">{player.className}</h2>
-            <div className="space-y-2 mb-8 text-left">
+            <div className="space-y-2 mb-8 text-center">
               <div>HP: {player.hp} / {player.maxHp}</div>
               <div>MP: {player.mp} / {player.maxMp}</div>
               <div>攻撃: {player.attack}</div>
