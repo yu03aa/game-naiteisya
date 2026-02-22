@@ -577,7 +577,12 @@ const TurnBasedRPG = () => {
       <div 
         className="min-h-screen text-white flex items-center justify-center p-8"
         style={{
-          backgroundImage: `url(${player.backgroundImage})`,
+          backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(${player.backgroundImage})`,
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+          backgroundRepeat: 'no-repeat'
+        }}
+      >
           backgroundSize: 'cover',
           backgroundPosition: 'center',
           backgroundRepeat: 'no-repeat'
@@ -632,7 +637,7 @@ const TurnBasedRPG = () => {
       <div 
         className="min-h-screen text-white p-4"
         style={{
-          backgroundImage: `url(${player.backgroundImage})`,
+          backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(${player.backgroundImage})`,
           backgroundSize: 'cover',
           backgroundPosition: 'center',
           backgroundRepeat: 'no-repeat'
@@ -814,7 +819,7 @@ const TurnBasedRPG = () => {
       <div 
         className="min-h-screen text-white flex items-center justify-center p-8"
         style={{
-          backgroundImage: `url(${player.backgroundImage})`,
+          backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(${player.backgroundImage})`,
           backgroundSize: 'cover',
           backgroundPosition: 'center',
           backgroundRepeat: 'no-repeat'
@@ -873,7 +878,7 @@ const TurnBasedRPG = () => {
       <div 
         className="min-h-screen text-white flex items-center justify-center p-8"
         style={{
-          backgroundImage: `url(${player.backgroundImage})`,
+          backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(${player.backgroundImage})`,
           backgroundSize: 'cover',
           backgroundPosition: 'center',
           backgroundRepeat: 'no-repeat'
