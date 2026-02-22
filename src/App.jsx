@@ -532,7 +532,7 @@ const TurnBasedRPG = () => {
         }}
       >
         <div className="w-full max-w-md space-y-3 px-4 py-4">
-          <div className="flex justify-center mb-6">
+          <div className="flex justify-center" style={{ marginBottom: '1.05rem' }}>
             <img src="./title.png" alt="タイトル" style={{ width: '210px', height: '210px' }} className="object-contain" />
           </div>
           {Object.entries(classes).map(([key, classData]) => (
