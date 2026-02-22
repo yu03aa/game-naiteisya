@@ -842,15 +842,17 @@ const TurnBasedRPG = () => {
           <div className="space-y-4">
             <button
               onClick={continueAdventure}
-              className="w-full bg-gradient-to-r from-green-600 to-blue-600 hover:from-green-700 hover:to-blue-700 py-4 rounded-lg font-bold text-xl transition-all transform hover:scale-105"
+              className="w-full transition-all transform hover:scale-105"
+              style={{ background: 'none', border: 'none', padding: 0 }}
             >
-              再挑戦
+              <img src="./saityousennUI.png" alt="再挑戦" style={{ width: '60%', margin: '0 auto', display: 'block' }} />
             </button>
             <button
               onClick={resetGame}
-              className="w-full bg-gray-600 hover:bg-gray-500 py-3 rounded-lg transition-all"
+              className="w-full transition-all transform hover:scale-105"
+              style={{ background: 'none', border: 'none', padding: 0 }}
             >
-              メニューに戻る
+              <img src="./menyuUI.png" alt="メニューに戻る" style={{ width: '60%', margin: '0 auto', display: 'block' }} />
             </button>
           </div>
         </div>
@@ -894,9 +896,10 @@ const TurnBasedRPG = () => {
           </div>
           <button
             onClick={resetGame}
-            className="w-full bg-gradient-to-r from-gray-600 to-gray-700 hover:from-gray-700 hover:to-gray-800 py-4 rounded-lg font-bold text-xl transition-all transform hover:scale-105"
+            className="w-full transition-all transform hover:scale-105"
+            style={{ background: 'none', border: 'none', padding: 0 }}
           >
-            メニューに戻る
+            <img src="./menyuUI.png" alt="メニューに戻る" style={{ width: '60%', margin: '0 auto', display: 'block' }} />
           </button>
         </div>
       </div>
