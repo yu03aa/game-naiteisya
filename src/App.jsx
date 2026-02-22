@@ -206,12 +206,19 @@ const TurnBasedRPG = () => {
   // ========== ゲームロジック関数 ==========
   const selectClass = (classKey) => {
     const selectedClassData = classes[classKey];
+    const backgroundImages = {
+      warrior: './piano.png',
+      mage: './hirune.png',
+      thief: './sauna.png',
+      priest: './game.png'
+    };
     setPlayer({
       ...selectedClassData.baseStats,
       className: selectedClassData.name,
       classSprite: selectedClassData.sprite,
       isImage: selectedClassData.isImage || false,
-      classKey: classKey
+      classKey: classKey,
+      backgroundImage: backgroundImages[classKey]
     });
     setSelectedClass(classKey);
     setGameState('menu');
@@ -570,7 +577,7 @@ const TurnBasedRPG = () => {
       <div 
         className="min-h-screen text-white flex items-center justify-center p-8"
         style={{
-          backgroundImage: 'url(./haikei.png)',
+          backgroundImage: `url(${player.backgroundImage})`,
           backgroundSize: 'cover',
           backgroundPosition: 'center',
           backgroundRepeat: 'no-repeat'
@@ -625,7 +632,7 @@ const TurnBasedRPG = () => {
       <div 
         className="min-h-screen text-white p-4"
         style={{
-          backgroundImage: 'url(./haikei.png)',
+          backgroundImage: `url(${player.backgroundImage})`,
           backgroundSize: 'cover',
           backgroundPosition: 'center',
           backgroundRepeat: 'no-repeat'
@@ -807,7 +814,7 @@ const TurnBasedRPG = () => {
       <div 
         className="min-h-screen text-white flex items-center justify-center p-8"
         style={{
-          backgroundImage: 'url(./haikei.png)',
+          backgroundImage: `url(${player.backgroundImage})`,
           backgroundSize: 'cover',
           backgroundPosition: 'center',
           backgroundRepeat: 'no-repeat'
@@ -866,7 +873,7 @@ const TurnBasedRPG = () => {
       <div 
         className="min-h-screen text-white flex items-center justify-center p-8"
         style={{
-          backgroundImage: 'url(./haikei.png)',
+          backgroundImage: `url(${player.backgroundImage})`,
           backgroundSize: 'cover',
           backgroundPosition: 'center',
           backgroundRepeat: 'no-repeat'
